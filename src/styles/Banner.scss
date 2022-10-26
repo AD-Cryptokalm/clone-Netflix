@@ -7,6 +7,20 @@
     min-width: 260px;
     color: white;
     margin: 0 4%;
+    &-type-container {
+        display: flex;
+        align-items: center;
+    }
+    &-miniLogo {
+        width: 14px;
+        margin-right: 0.5rem;  
+    }
+    &-type {
+        font-size: 0.7rem;
+        letter-spacing: 0.17rem;
+        color: rgba(191, 189, 189, 0.701);
+        text-transform: uppercase;
+    }
     &-title {
         margin-bottom: 1rem;
     }
@@ -27,18 +41,24 @@
         display: flex;
         align-items: center;
     }
+    &-btn1:hover {
+        filter: brightness(85%);
+    }
     &-icon1 {
         font-size: 1.2rem;
         margin-right: 0.5rem;
     }
     &-btn2 {
-        background: rgba(96, 92, 92, 0.599);
+        background: rgba(96, 92, 92, 0.549);
         color: white;
         padding: 0.4rem 1.2rem;
         border-radius: 5px;
         font-size: 0.8rem;
         display: flex;
         align-items: center;
+    }
+    &-btn2:hover {
+        background: rgba(96, 92, 92, 0.213);
     }
     &-icon2 {
         font-size: 0.9rem;
