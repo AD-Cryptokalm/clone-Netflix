@@ -3,11 +3,12 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className="footer">
+        <div className="footer-container">
       <div className="footer-icons">
-        <i className="fa-brands fa-facebook"></i>
-        <i className="fa-brands fa-instagram"></i>
-        <i className="fa-brands fa-twitter"></i>
-        <i className="fa-brands fa-youtube"></i>
+        <i className="fa-brands fa-facebook footer-icon"></i>
+        <i className="fa-brands fa-instagram footer-icon"></i>
+        <i className="fa-brands fa-twitter footer-icon"></i>
+        <i className="fa-brands fa-youtube footer-icon"></i>
       </div>
       <section className="footer-links-container">
       <div className="footer-links">
@@ -57,6 +58,7 @@ const Footer = () => {
       </section>
       <div className="code-service">Code de service</div>
       <div className="references">1997-2022 Netflix, Inc.</div>
+      </div>
     </footer>
   );
 };
