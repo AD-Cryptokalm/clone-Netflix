@@ -1,4 +1,4 @@
-import "./Footer.scss";
+import "../styles/Footer.scss";
 
 const Footer = () => {
   return (
@@ -12,46 +12,46 @@ const Footer = () => {
       </div>
       <section className="footer-links-container">
       <div className="footer-links">
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Audiodescription
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Relations Investisseurs
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Informations légales
         </a>
       </div>
       <div className="footer-links">
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Centre d'aide
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Recrutement
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Préférences de cookies
         </a>
       </div>
       <div className="footer-links">
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Cartes cadeaux
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Conditions d'utilisation
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Mentions légales
         </a>
       </div>
       <div className="footer-links">
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Presse
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Confidentialité
         </a>
-        <a href="" className="footer-link">
+        <a href="/" className="footer-link">
           Nous contacter
         </a>
       </div>

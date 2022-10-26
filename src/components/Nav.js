@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Nav.scss";
+import "../styles/Nav.scss";
 import NavSlider from "./NavSlider";
 
 const Nav = () => {
