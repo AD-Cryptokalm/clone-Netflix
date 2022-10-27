@@ -5,6 +5,7 @@ import axios from "axios";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
+  const [type, setType] = useState("");
   //   console.log(requestsApi.fetchTrending)
 
   useEffect(() => {
@@ -19,15 +20,14 @@ const Banner = () => {
       );
     }
     fetchData();
-  }, []);
+    if (movie.media_type === "tv") {
+      setType("Série");
+    } else if (movie.media_type === "movie") {
+      setType("Film");
+    }
+  }, [movie.media_type]);
   console.log(movie);
 
-//   const imgMovie = axios({
-//     method: "get",
-//     url: "https://api.themoviedb.org/3/movie/95403/images?api_key=2de1443070a5851805be617de2a6a73c&language=en-US",
-//   })
-//   .then((res) => console.log(res.data.backdrops))
-//   console.log(imgMovie)
   const imgBanner = {
     backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie.backdrop_path}")`,
     backgroundSize: "cover",
@@ -39,10 +39,13 @@ const Banner = () => {
       <div className="banner-container">
         <div className="banner-type-container">
           <img src="./images/miniLogo.png" alt="" className="banner-miniLogo" />
-          <p className="banner-type">{movie.media_type}</p>
+          <p className="banner-type">{type}</p>
         </div>
-        <h1 className="banner-title">{movie?.title || movie?.name ||movie?.original_name}</h1>
+        <h1 className="banner-title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
         <p className="banner-description">{movie.overview}</p>
+        <div className="banner-bottom">
         <div className="banner-btns">
           <button className="banner-btn1">
             <i className="fa-sharp fa-solid fa-play banner-icon1"></i> Lecture
@@ -50,6 +53,11 @@ const Banner = () => {
           <button className="banner-btn2">
             <i className="fa-solid fa-info banner-icon2"></i>Plus d'infos
           </button>
+        </div>
+        <div className="banner-info">
+          <i className="fa-solid fa-volume-high"></i>
+          <p className="banner-age">7+</p>
+        </div>
         </div>
       </div>
     </header>
