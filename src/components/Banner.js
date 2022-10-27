@@ -7,6 +7,11 @@ const Banner = () => {
   const [movie, setMovie] = useState([]);
   const [type, setType] = useState("");
   //   console.log(requestsApi.fetchTrending)
+  const imgBanner = {
+    backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie.backdrop_path}")`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -28,11 +33,7 @@ const Banner = () => {
   }, [movie.media_type]);
   console.log(movie);
 
-  const imgBanner = {
-    backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie.backdrop_path}")`,
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
-  };
+  
 
   return (
     <header className="banner" style={imgBanner}>
