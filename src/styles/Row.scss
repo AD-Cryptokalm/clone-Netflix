@@ -10,14 +10,14 @@
   &-btn1 {
     opacity: 0;
     position: absolute;
-    color: rgba(255, 255, 255, 0.412);
+    color: rgba(255, 255, 255, 0.742);
     padding: 0.5rem;
-    background-color: rgba(79, 77, 77, 0.649);
+    // background-color: rgba(79, 77, 77, 0.649);
     border-radius: 0 10px 10px 0;
     left: 4%;
-    top: 50%;
+    top: 56%;
     transform: translateY(-35%);
-    font-size: 3rem;
+    font-size: 3.5rem;
     z-index: 30;
     @media all and (orientation: portrait) {
       display: none;
@@ -28,20 +28,19 @@
   }
   &-btn2 {
     position: absolute;
-    color: rgba(255, 255, 255, 0.412);
+    color: rgba(255, 255, 255, 0.742);
     padding: 0.5rem;
-    background-color: rgba(79, 77, 77, 0.649);
     border-radius: 10px 0 0 10px;
     right: 0;
-    top: 50%;
-    font-size: 3rem;
+    top: 56%;
+    font-size: 3.5rem;
     transform: translateY(-35%);
+    opacity: 0;
     @media all and (orientation: portrait) {
       display: none;
     }
     &:hover {
-      background-color: rgba(79, 77, 77, 0.77);
-      color: rgba(255, 255, 255, 0.626);
+        opacity: 1;
     }
   }
 

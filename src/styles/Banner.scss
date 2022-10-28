@@ -10,6 +10,7 @@
     // margin: 0 4%;
     &-container {
         padding: 0 0 0 4%;
+        height: 110px;
     }
     &-type-container {
         display: flex;
@@ -102,7 +103,7 @@
             align-items: center;
             padding-left: 0.3rem;
             font-size: 0.8rem;
-            background: rgb(29, 25, 25);
+            background: rgba(29, 25, 25, 0.455);
             height: 25px;
             width: 60px;
             border-left: solid 3px white;

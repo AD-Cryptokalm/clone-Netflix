@@ -1,63 +1,140 @@
 .nav {
-    z-index: 10;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  padding: 20px 4%;
+  background: linear-gradient(
+    to bottom,
+    rgba(74, 74, 74, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+  @media screen and (max-width: 768px) {
+    background-color: black;
+    transition: background-color 0.5s ease-in-out;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: calc(0.5rem + 0.5vw);
+    margin: 0 0.6rem;
+  }
+  &-logo {
+    width: 9%;
+    min-width: 80px;
+    margin-right: 2rem;
+  }
+  &-black {
+    background-color: black;
+    transition: background-color 0.5s ease-in-out;
+  }
+  &-burger {
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    margin-right: 0.8rem;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &-links {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &-actions {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    position: fixed;
-    width: 100%;
-    padding: 20px 4%;
-    background: linear-gradient(to bottom, rgba(74, 74, 74, 0.6), rgba(0, 0, 0, 0));
-    @media screen and (max-width:768px) {
-        background-color: black;
-        transition: background-color 0.5s ease-in-out;
+    position: absolute;
+    right: 1rem;
+  }
+  &-menu {
+    margin-right: 2.5rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    &:hover .Icon {
+      transform: rotateZ(180deg);
     }
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: calc(0.5rem + 0.5vw);
-        margin: 0 0.6rem;
+    &:hover .toogleMenuVertical {
+      visibility: visible;
     }
-    &-logo {
-        width: 9%;
-        min-width: 80px;
-        margin-right: 2rem;
+
+    img {
+      border-radius: 5px;
+      margin:  0 0.7rem;
     }
-    &-black {
-        background-color: black;
-        transition: background-color 0.5s ease-in-out;
+  }
+  .Icon {
+    transition: 0.3s ease-in-out;
+  }
+  .toogleMenuVertical {
+    width: 37vh;
+    list-style-type: none;
+    color: white;
+    z-index: 50;
+    position: absolute;
+    right: 2.5rem;
+    top: 3rem;
+    background: rgba(0, 0, 0, 0.705);
+    padding-top: 1.2rem;
+    visibility: hidden;
+
+    &:hover {
+      visibility: visible;
     }
-    &-burger {
-        cursor: pointer;
-        color: white;
-        font-size: 1rem;
-        margin-right: 0.8rem;
-        @media screen and (min-width:768px) {
-            display: none;
-        }
-    }
-    &-links {
-        @media screen and (max-width:768px) {
-            display: none;
-        }
-    }
-    &-actions {
+    & .nav-menu-vertical-line {
+      margin-bottom: 0.7rem;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      font-size: 0.9rem;
+      letter-spacing: 0.01rem;
+      padding-left: 0.7rem;
+      
+      & img {
+        width: 36px;
+      }
+      & .iconParametre {
+        width: 36px;
         display: flex;
         align-items: center;
-        position: absolute;
-        right: 1rem;
+        justify-content: center;
+        margin-right: 0.7rem;
+        font-size: 1.2rem;
+      }
     }
-    &-action img {
-        border-radius: 5px;
-    }
-    &-action i {
-        color: white;
-    }
+  }
 }
+#passerrelle-hover {
+  position: absolute;
+
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  z-index: 60;
+  right: 3rem;
+  // top: 2rem;
+}
+.toogleMenuVertical-icon {
+  position:absolute;
+  right: 2rem;
+  top: -0.65rem;
+}
+
 .nav-slider {
-    transition: 0.5s ease-in-out;
-    border: solid 1px black;
-    position: absolute;
-    top: 4rem;
-    left: 4%;
-    
+  transition: 0.5s ease-in-out;
+  border: solid 1px black;
+  position: absolute;
+  top: 4rem;
+  left: 4%;
+}
+.logout {
+  text-align: center;
+  border-top: solid 1px white;
+  padding: 0.9rem 0;
+  font-size: 0.83rem;
+  letter-spacing: 0.01rem;
 }
