@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Banner.scss";
-// import requestsApi from "../config/RequestsApi";
 import axios from "axios";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
   const [type, setType] = useState("");
-  //   console.log(requestsApi.fetchTrending)
+
   const imgBanner = {
     backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie.backdrop_path}")`,
     backgroundSize: "cover",
@@ -31,7 +30,7 @@ const Banner = () => {
       setType("Film");
     }
   }, [movie.media_type]);
-  console.log(movie);
+  
 
   
 
