@@ -25,12 +25,14 @@
     width: 9%;
     min-width: 80px;
     margin-right: 2rem;
+    // flex: 1;
   }
   &-black {
     background-color: black;
     transition: background-color 0.5s ease-in-out;
   }
   &-burger {
+    // flex: 1;
     cursor: pointer;
     color: white;
     font-size: 1rem;
@@ -49,6 +51,9 @@
     align-items: center;
     position: absolute;
     right: 1rem;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   &-menu {
     margin-right: 2.5rem;
@@ -140,3 +145,19 @@
   font-size: 0.83rem;
   letter-spacing: 0.01rem;
 }
+.toogleInputShearch input {
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  background-color: rgb(13, 13, 13);
+  border: solid 2px rgba(255, 255, 255, 0.265);
+  width: 100px;
+  position: absolute;
+  top: 1.1rem;
+  right: 1.5rem;
+  // flex: 2;
+  opacity: 0;
+  @media screen and (max-width: 768px) {
+    opacity: 1;
+   
+  }
+} 

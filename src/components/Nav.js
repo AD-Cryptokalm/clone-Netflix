@@ -38,6 +38,9 @@ const Nav = () => {
             Films
           </a>
         </nav>
+        <form action="" className="toogleInputShearch">
+            <input type="text"  placeholder="Rechercher" />
+          </form>
         <div className="nav-actions">
           <a href="/" className="nav-action">
             <i className="fa-solid fa-magnifying-glass"></i>
