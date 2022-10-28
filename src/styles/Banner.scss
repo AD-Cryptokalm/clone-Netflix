@@ -41,6 +41,7 @@
     }
     &-btns {
         display: flex;
+        
         // justify-content: space-between;
     }
     &-btn1 {
@@ -51,6 +52,7 @@
         font-size: 0.8rem;
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
     &-btn1:hover {
         filter: brightness(85%);
@@ -67,6 +69,7 @@
         font-size: 0.8rem;
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
     &-btn2:hover {
         background: rgba(96, 92, 92, 0.485);

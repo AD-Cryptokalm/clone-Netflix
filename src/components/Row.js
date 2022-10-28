@@ -37,15 +37,15 @@ const Row = ({ title, url }) => {
             />
           </div>
         ))}
-      </div>
-      <div className="btns-scroll">
-        <button className="prev" onClick={() => slide(-200)}>
+      <div className="row-btns-scroll">
+        <button className="row-btn1" onClick={() => slide(-250)}>
           <i className="fa fa-angle-left"></i>
         </button>
 
-        <button className="next">
-          <i className="fa fa-angle-right"  onClick={() => slide(+200)}></i>
+        <button className="row-btn2">
+          <i className="fa fa-angle-right"  onClick={() => slide(+250)}></i>
         </button>
+      </div>
       </div>
     </div>
   );

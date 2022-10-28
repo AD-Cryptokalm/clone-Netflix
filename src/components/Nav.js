@@ -47,6 +47,7 @@ const Nav = () => {
         <a href="/" className="nav-action">
           <img src="./images/avatar.png" alt="" />
         </a>
+        <select name="" id="" className="nav-select"></select>
       </div>
     </div>
     {toogleMenuSlider && (
