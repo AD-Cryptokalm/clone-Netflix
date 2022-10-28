@@ -58,15 +58,15 @@ const Nav = () => {
               <i className="toogleMenuVertical-icon fa-solid fa-caret-up"></i>
               
                 <li className="nav-menu-vertical-line">
-                  <img src="./images/avatar.png" alt="" />
+                  <img src="./images/profil2.png" alt="" />
                   <span>Méline</span>
                 </li>
                 <li className="nav-menu-vertical-line">
-                  <img src="./images/avatar.png" alt="" />
+                  <img src="./images/profil3.jpg" alt="" />
                   <span>Mattis</span>
                 </li>
                 <li className="nav-menu-vertical-line">
-                  <img src="./images/avatar.png" alt="" />
+                  <img src="./images/profil4.png" alt="" />
                   <span>Maman</span>
                 </li>
                 <li className="nav-menu-vertical-line">
