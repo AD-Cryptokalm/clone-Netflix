@@ -16,10 +16,13 @@
     transition: background-color 0.5s ease-in-out;
   }
   a {
-    color: white;
+    color: rgba(255, 255, 255, 0.623);
     text-decoration: none;
     font-size: calc(0.5rem + 0.5vw);
     margin: 0 0.6rem;
+    &:active {
+      color: white;
+    }
   }
   &-logo {
     width: 9%;
@@ -42,6 +45,7 @@
     }
   }
   &-links {
+    
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -83,7 +87,7 @@
     position: absolute;
     right: 2.5rem;
     top: 3rem;
-    background: rgba(0, 0, 0, 0.705);
+    background: rgba(0, 0, 0, 0.742);
     padding-top: 1.2rem;
     visibility: hidden;
 
@@ -98,7 +102,7 @@
       font-size: 0.9rem;
       letter-spacing: 0.01rem;
       padding-left: 0.2rem;
-      
+      cursor: pointer;
       & img {
         width: 36px;
       }
@@ -144,6 +148,7 @@
   padding: 0.9rem 0;
   font-size: 0.83rem;
   letter-spacing: 0.01rem;
+  cursor: pointer;
 }
 .toogleInputShearch input {
   padding: 0.2rem 0.5rem;
