@@ -80,13 +80,13 @@ const Nav = () => {
                   <i className="fa-solid fa-pen iconParametre"></i>Gérer les profils
                 </li>
                 <li className="nav-menu-vertical-line">
-                  <i class="fa-regular fa-circle-right iconParametre"></i>Transférer un profil
+                  <i className="fa-regular fa-circle-right iconParametre"></i>Transférer un profil
                 </li>
                 <li className="nav-menu-vertical-line">
                   <i className="fa-regular fa-user iconParametre"></i>Compte
                 </li>
                 <li className="nav-menu-vertical-line">
-                  <i class="fa-regular fa-circle-question iconParametre"></i>Centre d'aide
+                  <i className="fa-regular fa-circle-question iconParametre"></i>Centre d'aide
                 </li>
               <div className="logout">Se déconnecter</div>
               </ul>

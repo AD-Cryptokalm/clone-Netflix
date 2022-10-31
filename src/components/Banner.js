@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../styles/Banner.scss";
 import axios from "axios";
 
+import QuickViewBanner from "./QuickView";
+
 const Banner = () => {
   const [movie, setMovie] = useState([]);
   const [type, setType] = useState("");
+  const [popupInfo, setPopupInfo] = useState(false);
 
-  const imgBanner = {
-    backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie.backdrop_path}")`,
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
+  const handlePopupInfo = () => {
+    popupInfo ? setPopupInfo(false) : setPopupInfo(true);
   };
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Banner = () => {
         ]
       );
     }
+
     fetchData();
     if (movie.media_type === "tv") {
       setType("Série");
@@ -31,8 +33,15 @@ const Banner = () => {
     }
   }, [movie.media_type]);
   
-
   
+  const imgBanner = {
+    backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path || null}")`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+  };
+  // console.log(movie);
+  // console.log(movie.id);
+  // console.log(movie.media_type);
 
   return (
     <header className="banner" style={imgBanner}>
@@ -46,19 +55,28 @@ const Banner = () => {
         </h1>
         <p className="banner-description">{movie.overview}</p>
         <div className="banner-bottom">
-        <div className="banner-btns">
-          <button className="banner-btn1">
-            <i className="fa-sharp fa-solid fa-play banner-icon1"></i> Lecture
-          </button>
-          <button className="banner-btn2">
-            <i className="fa-solid fa-info banner-icon2"></i>Plus d'infos
-          </button>
+          <div className="banner-btns">
+            <button className="banner-btn1">
+              <i className="fa-sharp fa-solid fa-play banner-icon1"></i> Lecture
+            </button>
+            <button className="banner-btn2" onClick={handlePopupInfo}>
+              <i className="fa-solid fa-info banner-icon2"></i>Plus d'infos
+            </button>
+          </div>
+          <div className="banner-info">
+            <i className="fa-solid fa-volume-high"></i>
+            <p className="banner-age">7+</p>
+          </div>
         </div>
-        <div className="banner-info">
-          <i className="fa-solid fa-volume-high"></i>
-          <p className="banner-age">7+</p>
-        </div>
-        </div>
+        {popupInfo ? (
+          <QuickViewBanner
+            movieId={movie.id}
+            mediaType={type}
+            img={movie.backdrop_path}
+            popupInfo={handlePopupInfo}
+            popupStatut={popupInfo}
+          />
+        ) : null}
       </div>
     </header>
   );
