@@ -1,6 +1,10 @@
+@font-face {
+	font-family: "helvetFont";
+	src: url('../../public/fonts/FreeSans.ttf');
+}
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen',
+  font-family: 'helvetFont', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

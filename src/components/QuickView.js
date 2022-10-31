@@ -37,15 +37,12 @@ const QuickViewBanner = ({
     convertRunTime(runTime);
   }, [movieId, movieDetail, runTime]);
 
-  //   console.log(convertRunTime(runTime)); // 👉️ 01:30
-
   const imgBanner = {
     backgroundImage: `url("https://image.tmdb.org/t/p/original/${img}")`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
   };
 
-  console.log(movieDetail);
   return (
     <div className="backdrop">
       <div className="quickViewBanner">

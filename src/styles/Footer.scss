@@ -1,54 +1,54 @@
 .footer {
-   color: white;
-   text-decoration: none;
-    padding: 2rem 12%;
-    background-color: rgb(13, 13, 13);
-    @media screen and (max-width:768px) {
-        padding: 2rem 4%;
-    }
-    &-container {
-        max-width: 980px;
-    }
-    &-links-container {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    &-links {
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        min-width: 150px;
-        flex-wrap: wrap;
-    }
-    &-link {
-        color: rgba(191, 189, 189, 0.701);
-        text-decoration: none;
-        margin-bottom: 1rem;
-        font-size: calc(0.6rem + 0.2vw);
-        letter-spacing: 0.05rem;
-    }
-    &-icons {
-        font-size: 1.5rem;
-        margin-bottom: 0.8rem;
-    }
-    &-icon {
-        margin: 0.5rem;
-    }
-    .code-service {
-        border: solid 1px ;
-        color: rgba(191, 189, 189, 0.701);
-        width:13%;
-        min-width: 100px;
-        padding: 0.5rem;
-        font-size: calc(0.6rem + 0.3vw);
-        display: flex;
-        justify-content: center;
-        margin-bottom:1rem;
-    }
-    .references {
-        font-size: calc(0.6rem + 0.3vw);
-        color: rgba(191, 189, 189, 0.701);
-    }
+  color: white;
+  text-decoration: none;
+  padding: 2rem 12%;
+  background-color: rgb(13, 13, 13);
+  @media screen and (max-width: 768px) {
+    padding: 2rem 4%;
+  }
+  &-container {
+    max-width: 980px;
+  }
+  &-links-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-links {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-width: 150px;
+    flex-wrap: wrap;
+  }
+  &-link {
+    color: rgba(191, 189, 189, 0.701);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: calc(0.6rem + 0.2vw);
+    letter-spacing: 0.03rem;
+  }
+  &-icons {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  &-icon {
+    margin: 0.5rem;
+  }
+  .code-service {
+    border: solid 1px;
+    color: rgba(191, 189, 189, 0.701);
+    width: 13%;
+    min-width: 100px;
+    padding: 0.5rem;
+    font-size: calc(0.6rem + 0.3vw);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .references {
+    font-size: calc(0.6rem + 0.3vw);
+    color: rgba(191, 189, 189, 0.701);
+  }
 }

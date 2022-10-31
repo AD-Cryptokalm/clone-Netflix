@@ -1,59 +1,57 @@
 .slider {
-    z-index: 1000;
-    position: fixed;
+  z-index: 21;
+  position: fixed;
+  color: rgba(255, 255, 255, 0.43);
+  background-color: rgb(13, 13, 13);
+  top: 3.8rem;
+  padding-top: 0.5rem;
+  list-style-type: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  &-profil-container {
+    padding-bottom: 1rem;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.112);
+    padding-left: 6%;
+  }
+  &-profil {
+    display: flex;
+    padding-bottom: 0.5rem;
+    & img {
+      margin-right: 0.5rem;
+    }
+  }
+  &-updateProfil {
+    display: flex;
+    flex-direction: column;
+  }
+  &-update {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.275);
+    font-size: 0.65rem;
+    margin-top: -0.1rem;
+  }
+  &-containerLinksUser a {
+    display: flex;
+    text-decoration: none;
     color: rgba(255, 255, 255, 0.43);
-    background-color: rgb(13, 13, 13);
-    top: 3.8rem;
-    
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    &:active {
+      color: white;
+    }
+  }
+  &-containerLinksMovies {
     padding-top: 0.5rem;
-    list-style-type: none;
-    @media screen and (min-width: 768px) {
-        display: none;
+    padding-left: 6%;
+    & li {
+      list-style-type: none;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+      letter-spacing: 0.02rem;
+      &:active {
+        color: white;
+      }
     }
-    &-profil-container {
-        padding-bottom: 1rem;
-        border-bottom: solid 1px rgba(255, 255, 255, 0.112);
-        padding-left: 6%;
-    }
-    &-profil {
-        display: flex;
-        padding-bottom: 0.5rem;
-        & img {
-            margin-right: 0.5rem;
-        }
-    }
-    &-updateProfil {
-        display: flex;
-        flex-direction: column;
-    }
-    &-update {
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.275);
-        font-size: 0.65rem;
-        margin-top: -0.1rem;
-    }
-    &-containerLinksUser a{
-        display: flex;
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.43);
-        margin-bottom: 0.4rem;
-        font-size: 1rem;
-        
-        &:active {
-            color: white;
-        }
-    }
-    &-containerLinksMovies {
-        padding-top: 0.5rem;
-        padding-left: 6%;
-        & li {
-            list-style-type: none;
-            margin-bottom: 0.4rem;
-            font-size: 1.1rem;
-            letter-spacing: 0.02rem;
-            &:active {
-                color: white;
-            }
-        }
-    }
+  }
 }

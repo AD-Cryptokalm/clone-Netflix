@@ -1,124 +1,118 @@
 .backdrop {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.825);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 19;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.825);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 19;
 }
-
 .quickViewBanner {
+  position: absolute;
+  z-index: 10;
+  width: 50%;
+  min-width: 350px;
+  background-color: black;
+  left: 50%;
+  top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateX(-50%);
+  & i {
+    cursor: pointer;
+  }
+  &-banner {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 5%;
+  }
+  &-titleTagline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    & p {
+      text-align: center;
+      letter-spacing: 0.02rem;
+      width: 40%;
+      font-size: calc(0.6rem + 0.4vw);
+    }
+  }
+  &-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+  &-btns {
+    display: flex;
+  }
+  &-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+    border: solid 0.1rem rgba(255, 255, 255, 0.571);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 0.5rem;
+  }
+  &-btn1 {
+    font-size: 1.7rem;
+  }
+  &-btnClose {
     position: absolute;
-    z-index: 10;
-//    border-top: solid 12px black;
-    width: 50%;
-    min-width: 350px;
-    // height: 300px;
-    background-color: black;
-    left: 50%;
-    top: 2rem;
-    border-radius: 10px;
-    overflow: hidden;
-    transform: translateX(-50%);
-    & i {
-        cursor: pointer;
+    margin: 0.5rem;
+    z-index: 20;
+    color: white;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: rgba(52, 51, 51, 0.784);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-details-container {
+    padding: 1rem 5% 2.5rem;
+    display: flex;
+    font-size: calc(0.45rem + 0.35vw);
+    letter-spacing: 0.01rem;
+  }
+  &-details-left {
+    width: 66%;
+    padding-right: 1rem;
+  }
+  &-infoMovie {
+    align-items: center;
+    display: flex;
+    margin-bottom: 1.5rem;
+    & p {
+      margin-right: 0.5rem;
+      letter-spacing: 0.01rem;
     }
-    &-banner {
-        height: 60vh;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        padding: 5%;
-    }
-    &-titleTagline {
-        display: flex;
-        align-items: center;
-        & h1 {
-            width: 100%;
-        }
-        & p {
-            text-align: center;
-            letter-spacing: 0.02rem;
-        }
-    }
-    &-info {
-        width: 100%;
-        justify-content: space-between;
-    }
-    &-btns {
-        display: flex;
-    }
-    &-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
-        border: solid 0.1rem rgba(255, 255, 255, 0.571);
-        border-radius: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        margin-right: 0.5rem;
-    }
-    &-btn1 {
-        font-size: 1.7rem;
-    }
-    &-btnClose {
-        position: absolute;
-        margin: 0.5rem;
-        z-index: 20;
-        color: white;
-        // top: -0.5rem;
-        right: 0;
-        width: 25px;
-        height: 25px;
-        border-radius: 25px;
-        background-color: rgba(52, 51, 51, 0.784);
-        
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-    }
-    &-details-container {
-        padding: 1rem 5% 2.5rem;
-        display: flex;
-        font-size: calc(0.45rem + 0.35vw);
-        letter-spacing: 0.01rem;
-    }
-    &-details-left {
-        width: 66%;
-        padding-right: 1rem;
-    }
-    &-infoMovie {
-        align-items: center;
-        display: flex;
-        margin-bottom: 1.5rem;
-        & p {
-            margin-right: 0.5rem;
-            letter-spacing: 0.01rem;
-        }
-    }
-    &-new {
-        color: rgb(15, 151, 15);
-    }
-    &-description {
-        letter-spacing: 0.01rem;
-        line-height: 1.1rem;
-    }
-    &-age {
-        // font-size: 0.8rem;
-        padding: 0 0.2rem;
-        border: solid 1px rgba(255, 255, 255, 0.517);
-    }
-    &-hd {
-        font-size: calc(0.2rem + 0.35vw);
-        padding: 0 0.2rem;
-        border: solid 1px rgba(255, 255, 255, 0.517);
-    }
-    &-sound i {
-        margin-right: 0;
-    }
+  }
+  &-new {
+    color: rgb(15, 151, 15);
+  }
+  &-description {
+    letter-spacing: 0.01rem;
+    line-height: 1.1rem;
+  }
+  &-age {
+    padding: 0 0.2rem;
+    border: solid 1px rgba(255, 255, 255, 0.517);
+  }
+  &-hd {
+    font-size: calc(0.2rem + 0.35vw);
+    padding: 0 0.2rem;
+    border: solid 1px rgba(255, 255, 255, 0.517);
+  }
+  &-sound i {
+    margin-right: 0;
+  }
 }
