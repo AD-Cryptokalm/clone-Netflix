@@ -3,17 +3,22 @@ import { useEffect, useState } from "react";
 
 import "../styles/QuickView.scss";
 
-const QuickViewBanner = ({ movieId, mediaType, img, popupInfo, popupStatut}) => {
+const QuickViewBanner = ({
+  movieId,
+  mediaType,
+  img,
+  popupInfo,
+  popupStatut,
+}) => {
   const [movieDetail, setMovieDetail] = useState("");
   const [date, setDate] = useState("");
-  const [runTime, setRunTime] = useState("")
+  const [runTime, setRunTime] = useState("");
 
   function convertRunTime(runTime) {
     const minutes = runTime % 60;
     const hours = Math.floor(runTime / 60);
 
     return `${padTo2Digits(hours)} h ${padTo2Digits(minutes)} min`;
-
   }
   function padTo2Digits(num) {
     return num.toString();
@@ -26,23 +31,21 @@ const QuickViewBanner = ({ movieId, mediaType, img, popupInfo, popupStatut}) => 
       );
       setMovieDetail(request.data);
       setDate(request.data.release_date);
-      setRunTime(convertRunTime(request.data.runtime))
+      setRunTime(convertRunTime(request.data.runtime));
     }
     fetchData();
     convertRunTime(runTime);
   }, [movieId, movieDetail, runTime]);
 
-  
-  
-//   console.log(convertRunTime(runTime)); // 👉️ 01:30
+  //   console.log(convertRunTime(runTime)); // 👉️ 01:30
 
   const imgBanner = {
     backgroundImage: `url("https://image.tmdb.org/t/p/original/${img}")`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
   };
- 
-//   console.log(movieDetail);
+
+  console.log(movieDetail);
   return (
     <div className="backdrop">
       <div className="quickViewBanner">
@@ -58,11 +61,14 @@ const QuickViewBanner = ({ movieId, mediaType, img, popupInfo, popupStatut}) => 
             />
             <p className="banner-type">{mediaType}</p>
           </div>
-          <h1 className="banner-title">
-            {movieDetail?.title ||
-              movieDetail?.name ||
-              movieDetail?.original_name}
-          </h1>
+          <div className="quickViewBanner-titleTagline">
+            <h1 className="banner-title">
+              {movieDetail?.title ||
+                movieDetail?.name ||
+                movieDetail?.original_name}
+            </h1>
+            <p className="quickViewBanner-tagline">{movieDetail.tagline}</p>
+          </div>
           <div className="banner-bottom quickViewBanner-info">
             <div className="banner-btns ">
               <button className="banner-btn1">
@@ -74,7 +80,7 @@ const QuickViewBanner = ({ movieId, mediaType, img, popupInfo, popupStatut}) => 
                 <i className="fa-regular fa-thumbs-up quickViewBanner-btn"></i>
               </div>
             </div>
-            <div className="banner-info">
+            <div className="banner-info quickViewBanner-sound">
               <i className="fa-solid fa-volume-high"></i>
             </div>
           </div>
@@ -82,15 +88,14 @@ const QuickViewBanner = ({ movieId, mediaType, img, popupInfo, popupStatut}) => 
         <section className="quickViewBanner-details-container">
           <div className="quickViewBanner-details-left">
             <div className="quickViewBanner-infoMovie">
+              <p className="quickViewBanner-new">Nouveau</p>
               <p className="quickViewBanner-year">{date.substring(4, 0)}</p>
               <p className="quickViewBanner-age">16+</p>
               <p className="quickViewBanner-time">{runTime}</p>
               <p className="quickViewBanner-hd">HD</p>
             </div>
             <div className="quickViewBanner-description">
-             
-                {movieDetail.overview}
-              
+              {movieDetail.overview}
             </div>
           </div>
           <div className="quickViewBanner-details-right">

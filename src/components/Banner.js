@@ -12,6 +12,11 @@ const Banner = () => {
   const handlePopupInfo = () => {
     popupInfo ? setPopupInfo(false) : setPopupInfo(true);
   };
+  const imgBanner = {
+    backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path || "xS7KPaLKrlKEzEWvc4TbC9AUkCy.jpg"}")`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -25,20 +30,16 @@ const Banner = () => {
       );
     }
 
-    fetchData();
     if (movie.media_type === "tv") {
       setType("Série");
     } else if (movie.media_type === "movie") {
       setType("Film");
     }
+    fetchData();
   }, [movie.media_type]);
   
   
-  const imgBanner = {
-    backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path || null}")`,
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
-  };
+  
   // console.log(movie);
   // console.log(movie.id);
   // console.log(movie.media_type);

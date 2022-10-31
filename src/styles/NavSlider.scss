@@ -7,6 +7,9 @@
     
     padding-top: 0.5rem;
     list-style-type: none;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
     &-profil-container {
         padding-bottom: 1rem;
         border-bottom: solid 1px rgba(255, 255, 255, 0.112);
@@ -35,7 +38,7 @@
         color: rgba(255, 255, 255, 0.43);
         margin-bottom: 0.4rem;
         font-size: 1rem;
-        cursor: pointer;
+        
         &:active {
             color: white;
         }
@@ -48,7 +51,6 @@
             margin-bottom: 0.4rem;
             font-size: 1.1rem;
             letter-spacing: 0.02rem;
-            cursor: pointer;
             &:active {
                 color: white;
             }
