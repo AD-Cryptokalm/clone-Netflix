@@ -7,6 +7,9 @@
   width: 100%;
   min-width: 260px;
   color: white;
+  @media all and (orientation: portrait) {
+    display: none;
+  }
   &-container {
     padding: 0 0 0 4%;
   }
@@ -69,7 +72,7 @@
     cursor: pointer;
   }
   &-btn2:hover {
-    background: rgba(96, 92, 92, 0.485);
+    background: rgba(96, 92, 92, 0.631);
   }
   &-icon2 {
     font-size: 0.9rem;

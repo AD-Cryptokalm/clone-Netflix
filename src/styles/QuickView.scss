@@ -57,11 +57,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     margin-right: 0.5rem;
   }
   &-btn1 {
     font-size: 1.7rem;
+    padding-bottom: 0.3rem;
   }
   &-btnClose {
     position: absolute;
@@ -114,5 +114,15 @@
   }
   &-sound i {
     margin-right: 0;
+  }
+  &-details-right {
+    color: rgb(79, 79, 79);
+    letter-spacing: 0.02rem;
+    & span {
+      color: white;
+    }
+  }
+  &-distribution {
+    margin-bottom: 0.5rem;
   }
 }

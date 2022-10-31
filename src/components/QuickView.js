@@ -14,18 +14,20 @@ const QuickViewBanner = ({
   const [date, setDate] = useState("");
   const [runTime, setRunTime] = useState("");
 
-  function convertRunTime(runTime) {
-    const minutes = runTime % 60;
-    const hours = Math.floor(runTime / 60);
-
-    return `${padTo2Digits(hours)} h ${padTo2Digits(minutes)} min`;
-  }
-  function padTo2Digits(num) {
-    return num.toString();
-  }
+  
 
   useEffect(() => {
     async function fetchData() {
+      function convertRunTime(runTime) {
+        const minutes = runTime % 60;
+        const hours = Math.floor(runTime / 60);
+    
+        return `${padTo2Digits(hours)} h ${padTo2Digits(minutes)} min`;
+      }
+      function padTo2Digits(num) {
+        return num.toString();
+      }
+      convertRunTime(runTime);
       const request = await axios.get(
         `https://api.themoviedb.org/3/movie/${movieId}?api_key=2de1443070a5851805be617de2a6a73c&language=en-fr`
       );
@@ -34,7 +36,6 @@ const QuickViewBanner = ({
       setRunTime(convertRunTime(request.data.runtime));
     }
     fetchData();
-    convertRunTime(runTime);
   }, [movieId, movieDetail, runTime]);
 
   const imgBanner = {
@@ -96,8 +97,8 @@ const QuickViewBanner = ({
             </div>
           </div>
           <div className="quickViewBanner-details-right">
-            <p className="quickViewBanner-distribution">Distibution:...</p>
-            <p className="quickViewBanner-distribution">Genres:...</p>
+            <p className="quickViewBanner-distribution">Distibution : <span>Mothusi Magano, frank Rautenback, Chris Chamelon, plus</span></p>
+            <p className="quickViewBanner-distribution">Genres : <span>Action, Fantastique</span></p>
           </div>
         </section>
       </div>
